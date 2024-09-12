@@ -1,0 +1,17 @@
+<script>
+    var data = [
+        {% for employee in employees %}
+    [
+        "{{forloop.counter}}",
+        "{{employee.name}}",
+        '{{ employee.age }}',
+        "{{employee.city}}",
+        "{{employee.position}}",
+        "{{employee.salary}}",
+        "{{employee.joined}}"] {%if not forloop.last %}, {% endif %}
+    {% endfor %}
+    ]
+    $('#myTable').DataTable({
+        data: data
+    });
+</script>

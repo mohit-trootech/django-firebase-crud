@@ -1,0 +1,8 @@
+__pycache__
+.env
+.venv
+.vscode
+.idea
+setup_configuration.md
+db.sqlite3
+response.py
